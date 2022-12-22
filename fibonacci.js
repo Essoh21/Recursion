@@ -15,4 +15,16 @@ function fibs(number) {
 }
 
 
-console.log(fibs(10));
+function fibsRec(number) {
+    if (number == 1) {
+        return [0];
+    } else if (number == 2) {
+        return [0, 1];
+    }
+    return [...fibsRec(number - 1)
+        , fibsRec(number - 1)[number - 2] + fibsRec(number - 1)[number - 3]
+    ];
+}
+
+setTimeout(() => console.log(`${fibsRec(20)} rec`), 2000);
+setTimeout(() => console.log(`${fibs(20)} loop`), 1000);
