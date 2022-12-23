@@ -26,5 +26,7 @@ function fibsRec(number) {
     ];
 }
 
-setTimeout(() => console.log(`${fibsRec(20)} rec`), 2000);
-setTimeout(() => console.log(`${fibs(20)} loop`), 1000);
+//setTimeout(() => console.log(`${fibsRec(20)} rec`), 2000);
+//setTimeout(() => console.log(`${fibs(20)} loop`), 1000);
+// using loop is fast and efficient but using recursion here hit 
+//stack overflow problem for big entegers and is very slow for integers greater that 20
